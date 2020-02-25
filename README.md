@@ -1,2 +1,2 @@
 # pyhton
-python学习
+记录python学习过程
