@@ -1,0 +1,24 @@
+Linux 安装Python3<br /><br />
+                                                                        
+<pre><code>cd /opt</code></pre>
+<p>下载安装包解压</p>
+<pre><code>wget https://www.python.org/ftp/python/3.7.3/Python-3.7.3.tgz
+tar -zxvf  Python-3.7.3.tgz
+cd Python-3.7.3</code></pre>
+<p>安装编译相关工具</p>
+<pre><code>yum -y groupinstall "Development tools"
+yum -y install zlib-devel bzip2-devel openssl-devel ncurses-devel sqlite-devel readline-devel tk-devel gdbm-devel db4-devel libpcap-devel xz-devel
+yum install libffi-devel -y</code></pre>
+<p>编译安装</p>
+<pre><code>mkdir /usr/local/python3 #创建编译安装目录
+./configure --prefix=/usr/local/python3
+make &amp;&amp; make install</code></pre>
+<p>创建软连接</p>
+<pre><code>ln -s /usr/local/python3/bin/python3 /usr/local/bin/python3
+ln -s /usr/local/python3/bin/pip3 /usr/local/bin/pip3</code></pre>
+<p>验证是否成功</p>
+<pre><code>python3 -V
+pip3 -V</code></pre>
+
+                                                            </div>
+                               
