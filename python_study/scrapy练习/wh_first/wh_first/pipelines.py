@@ -8,4 +8,7 @@
 
 class WhFirstPipeline(object):
     def process_item(self, item, spider):
+        for i in range(0,len(item["title"])):
+            print("------------")
+            print(item["title"][i])
         return item
