@@ -14,7 +14,7 @@ allline = re.compile(pat_pag,re.S).findall(data)[0]
 # print(allline)
 allpage = int(allline)//50 + 1
 
-for i in range(0,2):
+for i in range(0,allpage):
     print("------------正在爬"+str(i+1)+"页---------")
     url = "https://search.51job.com/list/180000,000000,0000,00,9,99,python,2,"+str(i+1)+".html"
     # print(url)
