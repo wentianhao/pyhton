@@ -1,0 +1,4 @@
+# log_file=./tmp/nmt_model\log_1515380225
+# Start step 0, lr 1, Mon Jan  8 10:57:13 2018
+  step 100 lr 1 step-time 0.18s wps 30.66K ppl 1758.34 gN 15.21 bleu 0.00, Mon Jan  8 10:57:32 2018
+  step 200 lr 1 step-time 0.14s wps 39.88K ppl 534.55 gN 6.03 bleu 0.00, Mon Jan  8 10:57:46 2018
