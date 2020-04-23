@@ -135,6 +135,8 @@ def crawl_pic_urls():
             pic_urls = []
             for pic_html in pic_list_html:
                 pic_urls.append(pic_html)
+                # pic_url = pic_html.text
+                # pic_urls.append(pic_url)
 
             down_pic(name, pic_urls)
             # num = num + len(pic_urls)
