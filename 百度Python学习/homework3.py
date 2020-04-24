@@ -128,17 +128,18 @@ def crawl_pic_urls():
             pic_response = requests.get(pic_home_url,headers=headers)
             pic_pat = '<a class="pic-item.*?<img src="(.*?)"'
             pic_list_html = re.compile(pic_pat,re.S).findall(pic_response.text)
-            # print(pic_list_html)
+            print(pic_list_html)
             # bs = BeautifulSoup(pic_response.text,'lxml')
             # pic_list_html = bs.select('.pic-list img')
 
-            pic_urls = []
-            for pic_html in pic_list_html:
-                pic_urls.append(pic_html)
-                # pic_url = pic_html.text
+            # pic_urls = []
+            # for pic_html in pic_list_html:
+            #     pic_urls.append(pic_html)
+            #     # pic_url = pic_html.text
                 # pic_urls.append(pic_url)
 
-            down_pic(name, pic_urls)
+            # down_pic(name, pic_urls)
+            down_pic(name,pic_list_html)
             # num = num + len(pic_urls)
             # n = n+len(pic_urlss)
             # print(name,len(pic_urls),len(pic_urlss))
