@@ -21,7 +21,7 @@ for i in range(1,sheet.nrows):
     d = xlrd.xldate_as_datetime(row_i[0],0)
     # print(i,": ",row_i)
     onetime = []
-    if d > starttime and d < endtime:
+    if d > starttime and d <= endtime:
         onetime.append(row_i[2])
         onetime.append(row_i[4])
         onetime.append(row_i[7])
