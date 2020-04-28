@@ -33,7 +33,8 @@ for i in range(1,sheet.nrows):
         # print("d",d)
         # print("onetime:",onetime)
     else:
-        print("one:",one)
+        print("one:", one)
+        print(len(one))
         user.append(one)
         # print("user:",user)
         one = []
@@ -50,10 +51,11 @@ for i in range(1,sheet.nrows):
             onetime.append(-1)
             onetime.append(-1)
             # print("onetime:", onetime)
+            # print(len(onetime))
             one.append(onetime)
-            # print("one:", one)
 
 print("user:",user)
+print(len(user))
 
 
 
