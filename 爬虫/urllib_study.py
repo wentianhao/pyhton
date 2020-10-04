@@ -3,20 +3,20 @@ import urllib.request
 import re
 import random
 
-url = "http://www.jd.com"
+# url = "http://www.jd.com"
 
-# 爬到内存中
-jd = urllib.request.urlopen(url).read().decode("utf-8","ignore")
-print(len(jd))
-pat = "<title>(.*?)</title>"
-title = re.compile(pat,re.S).findall(jd)
-print(title)
-
-# 爬到硬盘文件中
-urllib.request.urlretrieve(url,filename="./jd.html")
+# # 爬到内存中
+# jd = urllib.request.urlopen(url).read().decode("utf-8","ignore")
+# # print(len(jd))
+# pat = "<title>(.*?)</title>"
+# title = re.compile(pat,re.S).findall(jd)
+# # print(title)
+#
+# # 爬到硬盘文件中
+# urllib.request.urlretrieve(url,filename="./jd.html")
 
 # 浏览器伪装
-url2 = "https://www.qiushibaike.com/"
+url2 = "https://www.qiushibaike.com/text/page/2"
 opener = urllib.request.build_opener()
 UA = ("User-Agent","Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.88 Safari/537.36")
 opener.addheaders=[UA]
@@ -40,7 +40,8 @@ def UA():
     urllib.request.install_opener(opener)
     print("当前UA ："+str(thisua))
 
-for i in range(0,10):
+for i in range(0,1):
     UA()
     data = urllib.request.urlopen(url2).read().decode("utf-8","ignore")
-    print(len(data))
+    print(data)
+    # print(len(data))
