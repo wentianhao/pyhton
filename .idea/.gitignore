@@ -1,2 +1,14 @@
 # Default ignored files
 /workspace.xml
+*.json
+*.index
+*.txt
+*.meta
+*.pkl
+*.gz
+transformer/*
+./ccks_baidu_entity_link/code/bert_model/*
+./ccks_baidu_entity_link/code/data/*
+./ccks_baidu_entity_link/code/model/*
+./ccks_baidu_entity_link/code/original_data/*
+./ccks_baidu_entity_link/code/txt/*
