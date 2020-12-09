@@ -62,6 +62,7 @@ if __name__ == '__main__':
         print('')
         logger.info('输入 Q 退出程序')
         logger.info('输入 A 下载全部榜单歌曲')
+        logger.info('输入 S 下载单首歌曲')
         logger.info('输入榜单 Id 下载当前榜单歌曲')
 
         id = input('请输入：')
@@ -71,6 +72,10 @@ if __name__ == '__main__':
         elif str(id) == 'A':
             for id in ids:
                 down_song_by_topic_id(id, ids[id])
+        elif str(id) == 'S':
+            id = input('请输入ID：')
+            name = input('请输入NAME：')
+            down_song_by_song_id_name(id, name)
         else:
             print('')
             ans = get_topic_songs(id, ids[id])
